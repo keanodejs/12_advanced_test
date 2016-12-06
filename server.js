@@ -5,6 +5,9 @@ var BodyParser = require('body-parser'); // middle
 var users = require('./routes/users.js');
 var initdb = require('./routes/initdb.js');
 
+var cors = require('cors');
+app.use(cors());
+
 // middleware
 app.use(BodyParser.urlencoded({
     extended: true
