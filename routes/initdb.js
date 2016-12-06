@@ -28,7 +28,7 @@ app.use('/initdb', function (req, res) {
         usersCollection.remove({}, function (err, data) {
             usersCollection.insert(initUsers, function (err, data) {
                 productsCollection.remove({}, function (err, data) {
-                    productsCollection.insert(initUsers, function (err, data) {
+                    productsCollection.insert(initProducts, function (err, data) {
                         res.status(201);
                         res.json({ 'msg': 'database initialized' });
                         db.close();
